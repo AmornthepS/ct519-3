@@ -14,4 +14,4 @@ services:
     ports:
       - "80:80"
     volumes:
-      - ./myweb2:/usr/share/nginx/html
+      - ./myweb2/index.html:/usr/share/nginx/html/index.html
