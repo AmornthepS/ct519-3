@@ -63,10 +63,19 @@
         <h2>งานวิจัย</h2>
         <ul class="list-group">
           <li class="list-group-item">
-            <a href="/index.html" onclick="javascript:event.target.port=80">
+            <a href="#" onclick="navigateToPort80('/index.html')">
               <h5>หัวข้องานวิจัยที่ 1 Network Management</h5>
               <p>การบริหารจัดการเครือข่าย...</p>
             </a>
+            <script>
+              function navigateToPort80(path) {
+                const port = 80;
+                const url = new URL(window.location.href);
+                url.port = port;
+                url.pathname = path;
+                window.location.href = url.toString();
+              }
+            </script>
           </li>
         </ul>
       </div>
